@@ -1,14 +1,14 @@
 package com.len.chessdemo.elements;
 
+import com.len.chessdemo.utils.Position;
+
 public class Tile {
     private Piece piece;
-    private int x; // File
-    private int y; // Rank
+    private Position pos;
 
-    public Tile(int x, int y, Piece piece) {
+    public Tile(Position pos, Piece piece) {
         this.setPiece(piece);
-        this.setX(x);
-        this.setY(y);
+        this.setPos(pos);
     }
 
     public Piece getPiece() {
@@ -19,19 +19,11 @@ public class Tile {
         this.piece = piece;
     }
 
-    public int getX() {
-        return x;
+    public Position getPos() {
+        return pos;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
+    public void setPos(Position pos) {
+        this.pos = pos;
     }
 }

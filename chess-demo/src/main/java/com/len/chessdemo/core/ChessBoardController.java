@@ -1,6 +1,8 @@
 package com.len.chessdemo.core;
 
 import com.len.chessdemo.elements.Board;
+import com.len.chessdemo.utils.Move;
+import com.len.chessdemo.utils.Position;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,10 @@ public class ChessBoardController {
     @PutMapping("/board")
     public Board makeMove(@RequestBody BoardRequest request) {
         Board b = boardRepository.findById(request.getBoardId()).get();
+        Position fromPos = new Position(request.getFromX(), request.getFromY());
+        Position toPos = new Position(request.getToX(), request.getToY());
+
+        b.makeMove(new Move(request.getBoardId(), fromPos, toPos));
         Board save = boardRepository.save(b);
         return b;
     }

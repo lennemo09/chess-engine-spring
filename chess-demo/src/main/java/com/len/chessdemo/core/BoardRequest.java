@@ -1,16 +1,29 @@
 package com.len.chessdemo.core;
 
 public class BoardRequest {
+    public String boardId;
+    public int fromX;
+    public int fromY;
+    public int toX;
+    public int toY;
+
     public String getBoardId() {
         return boardId;
     }
 
-    public void setBoardId(String boardId) {
-        this.boardId = boardId;
+    public int getFromX() {
+        return fromX;
     }
 
-    //    public Player player;
-//    public Position pos;
-    public String boardId;
+    public int getFromY() {
+        return fromY;
+    }
 
+    public int getToX() {
+        return toX;
+    }
+
+    public int getToY() {
+        return toY;
+    }
 }

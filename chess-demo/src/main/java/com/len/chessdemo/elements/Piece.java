@@ -12,7 +12,7 @@ public abstract class Piece {
         this.setPlayer(player);
     }
 
-    public abstract boolean isLegalMove(Move move);
+    public abstract boolean checkTileMovable(Tile tile);
     //public abstract ArrayList<Move> getLegalMoves(Move move);
 
     public Player getPlayer() {

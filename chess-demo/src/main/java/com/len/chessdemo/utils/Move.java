@@ -5,13 +5,13 @@ import com.len.chessdemo.elements.Tile;
 public class Move {
 
     private String boardId;
-    private Tile src;
-    private Tile dst;
+    private Position src;
+    private Position dst;
 
-    public Move(String boardId, Tile sourceTile, Tile destinationTile) {
-        this.boardId = boardId;
-        this.src = sourceTile;
-        this.dst = destinationTile;
+    public Move(String boardId, Position sourcePos, Position destinationPos) {
+        this.setBoardId(boardId);
+        this.setSrc(sourcePos);
+        this.setDst(destinationPos);
     }
 
     public String getBoardId() {
@@ -22,19 +22,19 @@ public class Move {
         this.boardId = boardId;
     }
 
-    public Tile getSrc() {
+    public Position getSrc() {
         return src;
     }
 
-    public void setSrc(Tile src) {
+    public void setSrc(Position src) {
         this.src = src;
     }
 
-    public Tile getDst() {
+    public Position getDst() {
         return dst;
     }
 
-    public void setDst(Tile dst) {
+    public void setDst(Position dst) {
         this.dst = dst;
     }
 }

@@ -11,7 +11,8 @@ public class Pawn extends Piece {
     }
 
     @Override
-    public boolean isLegalMove(Move move) {
+    public boolean checkTileMovable(Tile tile) {
+        if (tile.getPiece() != null) return false;
         return true;
     }
 
