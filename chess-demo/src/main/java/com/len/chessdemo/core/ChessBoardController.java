@@ -1,6 +1,7 @@
 package com.len.chessdemo.core;
 
 import com.len.chessdemo.elements.Board;
+import com.len.chessdemo.elements.Piece;
 import com.len.chessdemo.utils.Move;
 import com.len.chessdemo.utils.Position;
 import org.slf4j.Logger;
@@ -32,7 +33,8 @@ public class ChessBoardController {
         Position fromPos = new Position(request.getFromX(), request.getFromY());
         Position toPos = new Position(request.getToX(), request.getToY());
 
-        b.makeMove(new Move(request.getBoardId(), fromPos, toPos));
+        Piece piece = b.makeMove(new Move(request.getBoardId(), fromPos, toPos));
+        logger.info("############################## Piece moved",piece);
         Board save = boardRepository.save(b);
         return b;
     }
