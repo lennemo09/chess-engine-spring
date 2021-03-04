@@ -1,5 +1,6 @@
-package com.len.chessdemo;
+package com.len.chessdemo.core;
 
+import com.len.chessdemo.elements.Board;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +19,6 @@ public class ChessBoardController {
     @GetMapping("/board")
     public Board getBoard() {
         Board b = new Board();
-        for (int i = 0; i < 8; i++) {
-            b.getBoard()[1][i] = new Pawn();
-            b.getBoard()[6][i] = new Pawn();
-        }
         Board save = boardRepository.save(b);
         logger.info("##############################",save.getBoard());
         return b;

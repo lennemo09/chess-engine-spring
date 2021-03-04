@@ -1,4 +1,4 @@
-package com.len.chessdemo;
+package com.len.chessdemo.core;
 
 public class BoardRequest {
     public String getBoardId() {

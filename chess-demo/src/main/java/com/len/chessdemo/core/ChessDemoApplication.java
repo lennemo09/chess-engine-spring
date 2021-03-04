@@ -1,12 +1,9 @@
-package com.len.chessdemo;
+package com.len.chessdemo.core;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 
+// Run with ./mvnw spring-boot:run
 @SpringBootApplication
 public class ChessDemoApplication {
 
